@@ -7,7 +7,7 @@ Finding correspondences between points along with a suitable transformation make
 While the original CPD introduced by A. Myronenko and X. Song does not consider any prior knowledge regarding point correspondences, the extended version introduced by V. Golyanik et al. incorporates (sparse) correspondence pairs as constraints.
 
 This implementation provides rigid, affine and non-rigid transformation models between two point sets X and Y.
-- rigid: X = sYR<sup>T</sup> +1t<sup>T</sup>, i.e. transformation can be described by rotation, translation and scaling (3 rot + 3 trans + 1 scal = 7 DoF).
+- rigid: _X_ = _s_Y__R_<sup>_T_</sup> +_1__t_<sup>T</sup>, i.e. transformation can be described by rotation, translation and scaling (3 rot + 3 trans + 1 scal = 7 DoF).
 - affine: transformation matrix is unconstrained, including any possible scalings and sheer (3 rot + 3 trans + 3 scal + 3 sheer = 12 DoF).
 - non-rigid: transformation could be any additive weighted kernel matrix.
 
