@@ -6,10 +6,10 @@ The goal of point set registration algorithms in computer vision is 1) to find c
 Finding correspondences between points along with a suitable transformation makes this class of algorithms especially usefull.
 While the original CPD introduced by A. Myronenko and X. Song does not consider any prior knowledge regarding point correspondences, the extended version introduced by V. Golyanik et al. incorporates (sparse) correspondence pairs as constraints.
 
-This implementation provides rigid, affine and non-rigid transformation models between two point sets X and Y.
-- rigid: _X_ = _sYR_<sup>T</sup> +_1t_<sup>T</sup>, i.e. transformation can be described by rotation, translation and a scaling factor (3 rot + 3 trans + 1 scal = 7 DoF).
-- affine: _X_ = _YB_<sup>T</sup> +_1t_<sup>T</sup>, i.e. affine matrix _B_ is unconstrained, allowing any scalings and sheer (3 rot + 3 trans + 3 scal + 3 sheer = 12 DoF).
-- non-rigid: _X_ = _Y_ + _GW_, with _G_ a Gaussian kernel and _W_ a coefficient matrix depending on smootheness and regularization parameters.
+This implementation provides rigid, affine and non-rigid transformations _T(Y)_ between two point sets X and Y.
+- rigid: _T(Y)_ = _sYR_<sup>T</sup> +_1t_<sup>T</sup>, i.e. transformation can be described by rotation, translation and a scaling factor (3 rot + 3 trans + 1 scal = 7 DoF).
+- affine: _T(Y)_ = _YB_<sup>T</sup> +_1t_<sup>T</sup>, i.e. affine matrix _B_ is unconstrained, allowing any scalings and sheer (3 rot + 3 trans + 3 scal + 3 sheer = 12 DoF).
+- non-rigid: _T(Y)_ = _Y_ + _GW_, with _G_ a Gaussian kernel and _W_ a coefficient matrix depending on smootheness and regularization parameters.
 
 ## Original papers
 
