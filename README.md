@@ -4,12 +4,12 @@ Extended Coherent Point Drift algorithm for point set registration with prior in
 This is an efficient C++ implementation of the ECPD algorithms for n-dimensional point set registration.
 The goal of point set registration algorithms in computer vision is 1) to find correspondences between two point sets X and Y and 2) to compute a transformation mapping from one to the other.
 Finding correspondences between points along with a suitable transformation makes this class of algorithms especially usefull.
-While the original CPD introduced by A. Myronenko and X. Song does not consider any prior knowledge regarding correspondences, the extended version introduced by V. Golyanik et al. incorporates (sparse) correspondence pairs as constraints.
+While the original CPD introduced by A. Myronenko and X. Song does not consider any prior knowledge regarding point correspondences, the extended version introduced by V. Golyanik et al. incorporates (sparse) correspondence pairs as constraints.
 
-This implementation provides rigid, affine and non-rigid transformation models.
-- rigid: the mapping between X and Y is described by rotation, translation and scaling (3 rot + 3 trans + 1 scal = 7 DoF).
-- affine: the transformation matrix is unconstrained, including any possible scalings and sheer (3 rot + 3 trans + 3 scal + 3 sheer = 12 DoF).
-- non-rigid: the transformation could be any additive weighted kernel matrix.
+This implementation provides rigid, affine and non-rigid transformation models between two point sets X and Y.
+- rigid: X = sYR[^T] +1t[^T], i.e. transformation can be described by rotation, translation and scaling (3 rot + 3 trans + 1 scal = 7 DoF).
+- affine: transformation matrix is unconstrained, including any possible scalings and sheer (3 rot + 3 trans + 3 scal + 3 sheer = 12 DoF).
+- non-rigid: transformation could be any additive weighted kernel matrix.
 
 ## Original papers
 
