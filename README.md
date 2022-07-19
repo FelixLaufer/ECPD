@@ -8,7 +8,7 @@ While the original CPD introduced by A. Myronenko and X. Song does not consider 
 
 This implementation provides rigid, affine and non-rigid transformation models between two point sets X and Y.
 - rigid: _X_ = _sYR_<sup>T</sup> +_1t_<sup>T</sup>, i.e. transformation can be described by rotation, translation and scaling (3 rot + 3 trans + 1 scal = 7 DoF).
-- affine: _X_ = _YB<sup>T</sup> +_1t_<sup>T</sup>, i.e. transformation matrix is unconstrained, including possible scalings and sheer (3 rot + 3 trans + 3 scal + 3 sheer = 12 DoF).
+- affine: _X_ = _YB_<sup>T</sup> +_1t_<sup>T</sup>, i.e. transformation matrix is unconstrained, including possible scalings and sheer (3 rot + 3 trans + 3 scal + 3 sheer = 12 DoF).
 - non-rigid: _X_ = _Y_ + _GW_, with G a Gaussian kernel and _W_ a coefficient matrix dependent on two regularization parameters controlling the trade-off between smootheness, ML fit and regularization (c.f. paper).
 
 ## Original papers
