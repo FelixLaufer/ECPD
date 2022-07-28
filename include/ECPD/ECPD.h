@@ -1,8 +1,10 @@
-#ifndef _ECPD_H_
-#define _ECPD_H_
+// MIT License, Copyright (c) 2022 Felix Laufer
 
 // Coherent Point Drift: https://www.researchgate.net/publication/47544556_Point_Set_Registration_Coherent_Point_Drift
 // Extended Coherent Point Drift: https://www.researchgate.net/publication/297497171_Extended_Coherent_Point_Drift_Algorithm_with_Correspondence_Priors_and_Optimal_Subsampling
+
+#ifndef _ECPD_H_
+#define _ECPD_H_
 
 #include "Constants.h"
 #include "EigenTypes.h"
