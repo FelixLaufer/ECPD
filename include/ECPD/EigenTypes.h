@@ -1,11 +1,10 @@
-// MIT License, Copyright (c) 2022 Felix Laufer
+// MIT License, Copyright (c) 2022 Markus Miezal, Felix Laufer
 
 #ifndef _EIGEN_TYPES_H_
 #define _EIGEN_TYPES_H_
 
 #include <Eigen/Core>
 #include <Eigen/Geometry>
-
 
 typedef double ScalarType;
 typedef Eigen::Matrix<ScalarType, 2, 2> Matrix2x2;
