@@ -1,3 +1,5 @@
+// MIT License, Copyright (c) 2022 Felix Laufer
+
 #include <ECPD/ECPD.h>
 #include <ECPD/Rigid.h>
 #include <ECPD/Affine.h>
