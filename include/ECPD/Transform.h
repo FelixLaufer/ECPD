@@ -1,3 +1,5 @@
+// MIT License, Copyright (c) 2022 Markus Miezal, Felix Laufer
+
 #ifndef _TRANSFORM_H_
 #define _TRANSFORM_H_
 
@@ -6,17 +8,20 @@
 class Transform
 {
  public:
-  Transform(Quaternion q = Quaternion::Identity(), Vector3 p = Vector3::Zero())
+  Transform(const Quaternion& q = Quaternion::Identity(), const Vector3& p = Vector3::Zero())
     : pos(p)
-	, quat(q)
+    , quat(q)
   {}
   
   Transform(const Transform& other)
     : pos(other.pos)
-	, quat(other.quat)
+    , quat(other.quat)
   {}
   
-  Transform(const Vector& v) { fromVector(v); }
+  Transform(const Vector& v)
+  {
+    fromVector(v);
+  }
 
   inline Vector toVector() const
   {
