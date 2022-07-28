@@ -1,3 +1,5 @@
+// MIT License, Copyright (c) 2022 Felix Laufer
+
 #ifndef _AFFINE_H_
 #define _AFFINE_H_
 
