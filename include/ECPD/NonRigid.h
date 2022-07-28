@@ -95,7 +95,7 @@ public:
       // Update sigma2
       model.sigma2 = std::abs(((X.transpose() * PT1.asDiagonal() * X).trace() - 2 * ((model.P * X).transpose() * model.T).trace() + (model.T.transpose() * P1.asDiagonal() * model.T).trace()) / (P1.sum() * D));
  
-      // ToDo: maybe implement adaption step from Matlab implementation?
+      // ToDo: maybe include adaption step from paper and reference implementation?
 
       if (config.verbose)
         std::cout << "Iteration #" << iter + 1 << ", sigma2 = " << model.sigma2 << std::endl;
