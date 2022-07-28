@@ -1,3 +1,5 @@
+// MIT License, Copyright (c) 2022 Felix Laufer
+
 #ifndef _EIGEN_TYPES_H_
 #define _EIGEN_TYPES_H_
 
@@ -21,6 +23,5 @@ typedef Eigen::Matrix<ScalarType, Eigen::Dynamic, 1> Vector;
 
 typedef Eigen::AngleAxis<ScalarType> AngleAxis;
 typedef Eigen::Quaternion<ScalarType> Quaternion;
-
 
 #endif
