@@ -1,4 +1,4 @@
-// MIT License, Copyright (c) 2022 Felix Laufe
+// MIT License, Copyright (c) 2022 Felix Laufer
 
 #ifndef _NONRIGID_H_
 #define _NONRIGID_H_
