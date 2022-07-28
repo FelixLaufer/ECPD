@@ -1,3 +1,5 @@
+// MIT License, Copyright (c) 2022 Felix Laufer
+
 #ifndef _CONSTANTS_H_
 #define _CONSTANTS_H_
 
