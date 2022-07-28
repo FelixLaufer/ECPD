@@ -1,3 +1,5 @@
+// MIT License, Copyright (c) 2022 Felix Laufer
+
 #ifndef _RIGID_H_
 #define _RIGID_H_
 
