@@ -138,12 +138,12 @@ public:
   }
 
 protected:
-  static void denormalize(const NormParams& nP, Model& model, Affine& affineTransform)
+  static void denormalize(const NormParams& nP, Model& model, Affine& transform)
   {
     ECPD<>::denormalize(nP, model);
     const ScalarType s = nP.xScale / nP.yScale;
-    affineTransform.t = nP.xScale * affineTransform.t + nP.xMean - s * affineTransform.B * nP.yMean;
-    affineTransform.B = s * affineTransform.B;
+    transform.t = nP.xScale * transform.t + nP.xMean - s * transform.B * nP.yMean;
+    transform.B = s * transform.B;
   }
 
 private:
