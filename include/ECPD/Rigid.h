@@ -208,11 +208,11 @@ public:
   }
 
 protected:
-  static void denormalize(const NormParams& nP, Model& model, Rigid& rigidTransform)
+  static void denormalize(const NormParams& nP, Model& model, Rigid& transform)
   {
     ECPD<>::denormalize(nP, model);
-    rigidTransform.s *= nP.xScale / nP.yScale;
-    rigidTransform.t = nP.xScale * rigidTransform.t + nP.xMean - rigidTransform.s * rigidTransform.R * nP.yMean;
+    transform.s *= nP.xScale / nP.yScale;
+    transform.t = nP.xScale * transform.t + nP.xMean - transform.s * transform.R * nP.yMean;
   }
 };
 
