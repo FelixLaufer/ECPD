@@ -14,7 +14,7 @@
 #include <utility>
 
 class BaseTransform;
-template<typename Transform = BaseTransform>
+template<typename TTransform = BaseTransform>
 class ECPD
 {
 public:
@@ -37,12 +37,12 @@ public:
     ScalarType L = 0;
   };
 
-  static std::pair<Transform, Model> compute(const Matrix& Xarg, const Matrix& Yarg, const Config& config = Config(), const Matrix& Pcon = Matrix::Zero(0, 0))
+  static std::pair<TTransform, Model> compute(const Matrix& Xarg, const Matrix& Yarg, const Config& config = Config(), const Matrix& Pcon = Matrix::Zero(0, 0))
   {
-    return { Transform(), Model() };
+    return { TTransform(), Model() };
   }
 
-  static std::pair<Transform, Model> compute(const Matrix& Xarg, const Matrix& Yarg, const Config& config, const std::vector<std::pair<unsigned int, unsigned int>>& constraints)
+  static std::pair<TTransform, Model> compute(const Matrix& Xarg, const Matrix& Yarg, const Config& config, const std::vector<std::pair<unsigned int, unsigned int>>& constraints)
   {
     return compute(Xarg, Yarg, config, constraints2Pcon(Xarg.rows(), Yarg.rows(), constraints));
   }
